@@ -1,0 +1,13 @@
+{
+  "extends": ["airbnb/base", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": ["import", "react"],
+  "globals": {
+    "document": true
+  }
+}
