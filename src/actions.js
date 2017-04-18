@@ -22,7 +22,6 @@ export function fetchAllBadges() {
     return fetch('https://www.khanacademy.org/api/v1/badges')
       .then(
         response => response.json(),
-        error => console.log('An error occured. ', error),
       )
       .then(json =>
         dispatch(receiveAllBadges(json)),

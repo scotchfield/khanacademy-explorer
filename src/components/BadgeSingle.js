@@ -5,14 +5,18 @@ class BadgeSingle extends React.Component {
   render() {
     return (
       <div className='badge-single'>
-        <h1>{this.props.badge}</h1>
+        <img src={this.props.icon_src} alt="Badge Icon"/>
+        <h2>{this.props.description}</h2>
+        <p>{this.props.safe_extended_description}</p>
       </div>
     );
   }
 }
 
 BadgeSingle.propTypes = {
-  badge: PropTypes.object,
+  description: PropTypes.string,
+  icon_src: PropTypes.string,
+  safe_extended_description: PropTypes.string,
 };
 
 export default BadgeSingle;

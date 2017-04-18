@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 
 import BadgeSingle from '../components/BadgeSingle';
 
-class App extends React.component {
+class App extends React.Component {
   render() {
     return (
       <div>
         <h1>All Badges</h1>
         { this.props.badges ?
-            this.props.badges.map(badge => <BadgeSingle badge={badge} />,
+            this.props.badges.map(
+              badge => <BadgeSingle key={badge.name} {...badge} />,
             )
           : null
         }
