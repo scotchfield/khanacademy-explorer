@@ -16,7 +16,7 @@ class App extends React.Component {
         <h1>All Badges</h1>
         { this.props.badges ?
             this.props.badges.map(
-              badge => <BadgeSingle key={badge.name} {...badge} />,
+              (badge, i) => <BadgeSingle key={badge.name} index={i} {...badge} />,
             )
           : null
         }

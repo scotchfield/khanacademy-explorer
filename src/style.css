@@ -1,4 +1,21 @@
 body {
   background-color: white;
   color: black;
+  text-align: center;
+}
+.badge-single {
+  padding: 16px;
+  text-align: center;
+}
+.badge-single img {
+  display: inline-block;
+}
+.badge-single span.title {
+  font-size: 150%;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-top: 4px;
+}
+.badge-single.clear {
+  clear: left;
 }
