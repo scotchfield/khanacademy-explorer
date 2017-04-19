@@ -2,8 +2,10 @@ import { combineReducers } from 'redux';
 
 import {
   FETCH_ALL_BADGES, RECEIVE_ALL_BADGES,
+} from './actions/AllBadges';
+import {
   FETCH_ALL_BADGE_CATEGORIES, RECEIVE_ALL_BADGE_CATEGORIES,
-} from './actions';
+} from './actions/BadgeCategories';
 
 
 function allBadges(state = {

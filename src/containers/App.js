@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { fetchAllBadges, fetchAllBadgeCategories } from '../actions';
+import fetchAllBadges from '../actions/AllBadges';
+import fetchAllBadgeCategories from '../actions/BadgeCategories';
 
 import BadgePanel from '../components/BadgePanel';
 import BadgeCategoryPanel from '../components/BadgeCategoryPanel';
