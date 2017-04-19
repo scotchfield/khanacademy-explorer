@@ -4,22 +4,19 @@ import { connect } from 'react-redux';
 
 import { fetchAllBadges } from '../actions';
 
-import BadgeSingle from '../components/BadgeSingle';
+import BadgePanel from '../components/BadgePanel';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => { this.props.dispatch(fetchAllBadges()); }}>
+        <button
+          className='btn btn-primary'
+          onClick={() => { this.props.dispatch(fetchAllBadges()); }}
+        >
           Get All Badges
         </button>
-        <h1>All Badges</h1>
-        { this.props.badges ?
-            this.props.badges.map(
-              (badge, i) => <BadgeSingle key={badge.name} index={i} {...badge} />,
-            )
-          : null
-        }
+        <BadgePanel badges={this.props.badges} />
       </div>
     );
   }
